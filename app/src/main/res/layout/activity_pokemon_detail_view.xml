@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.mobiledev.homework2.PokemonDetailView">
+
+    <ImageView
+        android:id="@+id/activity_detail_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/activity_detail_pokemon_name"
+        android:contentDescription="@string/image_description_detail_view"
+        tools:background="@android:color/holo_red_light" />
+
+    <TextView
+        android:id="@+id/activity_detail_pokemon_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        tools:text="Long Dick Style" />
+
+    <LinearLayout
+        android:id="@+id/activity_detail_image_and_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_detail_imageview"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_weight_number_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            tools:text="W: 100" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            tools:text="123" />
+
+        <TextView
+            android:id="@+id/activity_height_number_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            tools:text="Height: 10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_specs_online_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_detail_image_and_name"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_detail_HP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:textSize="24sp"
+            tools:text="HP: 5 hours" />
+
+        <TextView
+            android:id="@+id/activity_detail_attack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:textSize="24sp"
+            tools:text="Attack: Super Strong" />
+
+        <TextView
+            android:id="@+id/activity_detail_defense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:textSize="24sp"
+            tools:text="Defense: Super Strong"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Homework2</string>
+    <string name="image_description_detail_view">This is where the image of the pokemon goes</string>
+</resources>
