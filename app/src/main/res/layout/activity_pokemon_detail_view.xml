@@ -8,6 +8,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.mobiledev.homework2.PokemonDetailView">
 
+    <TextView
+        android:id="@+id/activity_detail_pokemon_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        tools:text="TOMAS IS AMAZING" />
+
     <ImageView
         android:id="@+id/activity_detail_imageview"
         android:layout_width="match_parent"
@@ -16,17 +28,6 @@
         android:contentDescription="@string/image_description_detail_view"
         tools:background="@android:color/holo_red_light" />
 
-    <TextView
-        android:id="@+id/activity_detail_pokemon_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="26sp"
-        tools:text="TOMAS IS AMAZING" />
 
     <LinearLayout
         android:id="@+id/activity_detail_image_and_name"
@@ -50,7 +51,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="24sp"
-            tools:text="123" />
+            tools:text="ID: 123" />
 
         <TextView
             android:id="@+id/activity_height_number_detail"
