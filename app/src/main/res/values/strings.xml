@@ -3,4 +3,5 @@
     <string name="weight_label">Weight: %s</string>
     <string name="height_label">Height: %s</string>
     <string name="image_description_detail_view">This is where the image of the pokemon goes</string>
+    <string name="main_activity_toolbar_title">Pokedex 2000 Lite</string>
 </resources>
