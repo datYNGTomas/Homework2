@@ -8,11 +8,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.mobiledev.homework2.PokemonDetailView">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/activity_detail_pokemon_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/activity_detail_toolbar"
         android:layout_marginBottom="4dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
