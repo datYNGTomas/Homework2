@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/row_pokemon_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="34sp"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/row_pokemon_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/row_pokemon_id"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:text="FakePokemon" />
+
+    <TextView
+        android:id="@+id/row_pokemon_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_pokemon_textView"
+        android:textSize="20sp"
+        tools:text="W:85" />
+
+    <TextView
+        android:id="@+id/row_pokemon_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_pokemon_textView"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@id/row_pokemon_weight"
+        android:textSize="20sp"
+        tools:text="H:185" />
+
+
+</RelativeLayout>
