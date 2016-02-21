@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Homework2</string>
+    <string name="weight_label">Weight: %s</string>
+    <string name="height_label">Height: %s</string>
     <string name="image_description_detail_view">This is where the image of the pokemon goes</string>
 </resources>

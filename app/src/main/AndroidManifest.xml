@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PokemonDetailView"></activity>
+        <activity android:name=".PokemonDetailView" />
+        <activity android:name=".PokemonRecyclerView"></activity>
     </application>
 
 </manifest>
