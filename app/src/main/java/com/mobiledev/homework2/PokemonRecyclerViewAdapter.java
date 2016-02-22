@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -69,6 +70,7 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
     static class PokemonViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, id, weight, height;
+        ImageView image;
         View fullView;
 
         public PokemonViewHolder(View itemView) {
@@ -78,6 +80,7 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
             id = (TextView) itemView.findViewById(R.id.row_pokemon_id);
             weight = (TextView) itemView.findViewById(R.id.row_pokemon_weight);
             height = (TextView) itemView.findViewById(R.id.row_pokemon_height);
+            image = (ImageView) itemView.findViewById(R.id.individual_row_image);
         }
 
     }
