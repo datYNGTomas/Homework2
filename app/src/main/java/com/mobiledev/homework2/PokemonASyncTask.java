@@ -22,7 +22,7 @@ public class PokemonASyncTask extends AsyncTask<String, Integer, JSONArray> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        Log.d(TAG, "Started AsyncTask");
+        Log.d(TAG, "Pokedex 2000 Lite has been activated");
     }
 
     @Override
@@ -34,10 +34,10 @@ public class PokemonASyncTask extends AsyncTask<String, Integer, JSONArray> {
             return null;
         }
 
-        String userId = params[0];
+        String IDNumber = params[0];
 
         try {
-            URL url = new URL("https://api.github.com/users/" + userId + "/subscriptions");
+            URL url = new URL("http://pokeapi.co/api/v2/pokemon/" + IDNumber);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 
