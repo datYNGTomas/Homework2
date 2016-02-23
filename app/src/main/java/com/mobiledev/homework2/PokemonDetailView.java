@@ -29,7 +29,7 @@ public class PokemonDetailView extends AppCompatActivity {
 
         Picasso.with(this).load(Pokemon.getImageUrl()).fit().centerInside().into(pokemonImageView);
 
-        nameTextView.setText(Pokemon.getName() + getString(R.string.corny_title_toolbar));
+        nameTextView.setText(getString(R.string.corny_title_toolbar, Pokemon.getName()));
         mIDnumberTextView.setText(getString(R.string.ID_label, Pokemon.getId()));
         heightTextView.setText(getString(R.string.height_label, Pokemon.getHeight()));
         weightTextView.setText(getString(R.string.weight_label, Pokemon.getWeight()));
