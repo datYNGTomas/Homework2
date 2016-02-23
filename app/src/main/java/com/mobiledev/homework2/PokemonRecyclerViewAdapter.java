@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecyclerViewAdapter.PokemonViewHolder> {
@@ -38,6 +40,7 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
         holder.name.setText(pokemon.getName());
         holder.id.setText(pokemon.getId());
 
+        Picasso.with(holder.row_image.getContext()).load(pokemon.getImageUrl()).fit().centerInside().into(holder.row_image);
 
         Context context = holder.name.getContext();
         String weight = context.getString(R.string.weight_label, pokemon.getWeight());
@@ -65,7 +68,7 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
     static class PokemonViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, id, weight, height;
-        ImageView pokemon;
+        ImageView row_image;
         View fullView;
 
         public PokemonViewHolder(View itemView) {
@@ -75,7 +78,7 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
             id = (TextView) itemView.findViewById(R.id.row_pokemon_id);
             weight = (TextView) itemView.findViewById(R.id.row_pokemon_weight);
             height = (TextView) itemView.findViewById(R.id.row_pokemon_height);
-            pokemon = (ImageView) itemView.findViewById(R.id.individual_row_image);
+            row_image = (ImageView) itemView.findViewById(R.id.individual_row_image);
         }
     }
 }

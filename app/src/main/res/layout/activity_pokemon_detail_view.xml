@@ -28,9 +28,9 @@
         android:layout_height="200dp"
         android:layout_below="@+id/activity_detail_toolbar"
         android:contentDescription="@string/image_description_detail_view"
-        android:paddingTop="16dp"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
+        android:paddingTop="16dp"
         tools:background="@android:color/holo_red_light" />
 
 
@@ -40,10 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_detail_imageview"
         android:orientation="horizontal"
-        android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:paddingEnd="16dp"
-        android:paddingStart="16dp">
+        android:paddingStart="16dp"
+        android:paddingTop="8dp">
 
         <TextView
             android:id="@+id/activity_weight_number_detail"
@@ -51,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             tools:text="W: 100" />
 
@@ -60,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             tools:text="ID: 123" />
 
@@ -69,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             tools:text="H: 10" />
 
@@ -97,6 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:text="HP: 5 hours" />
 
@@ -105,6 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:text="Attack: Super Strong" />
 
@@ -113,6 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:text="Defense: Super Strong" />
 
@@ -121,6 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:text="Speed: Super Fast" />
 
@@ -129,6 +136,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:text="Special Attack: Super Strong" />
 
@@ -137,6 +145,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:text="Special Defense: Super Strong" />
 
@@ -145,6 +154,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:text="Base Experience: Amazing" />
     </LinearLayout>

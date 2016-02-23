@@ -7,4 +7,5 @@
     <color name="primary_material_dark">#000000</color>
     <color name="silver">#C0C0C0</color>
     <color name="gray">#808080</color>
+    <color name="background_material_dark">#ffffff</color>
 </resources>

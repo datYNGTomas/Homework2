@@ -47,7 +47,7 @@ public class PokemonRecyclerView extends AppCompatActivity implements PokemonRec
 
         if (requestCode == ID_POKEMON && resultCode == RESULT_OK) {
             Pokemon pokemon = data.getParcelableExtra(PokemonDetailView.ARG_POKEMON);
-            //Log.d(TAG, "onItemClick(): Removed pokemon at position: " + pokemon);
+            //Log.d(TAG, "onItemClick(): Removed row_image at position: " + row_image);
         }
 
         super.onActivityResult(requestCode, resultCode, data);

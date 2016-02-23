@@ -18,13 +18,15 @@
         android:id="@+id/individual_row_text"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="9">
+        android:layout_weight="9"
+        android:paddingStart="10dp">
 
         <TextView
             android:id="@+id/row_pokemon_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:textColor="@android:color/black"
             android:textSize="28sp"
             tools:text="5" />
 
@@ -33,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@id/row_pokemon_id"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold"
             tools:text="FakePokemon" />
@@ -42,6 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/row_pokemon_textView"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             tools:text="W:85" />
 
@@ -52,6 +56,7 @@
             android:layout_below="@id/row_pokemon_textView"
             android:layout_marginStart="6dp"
             android:layout_toEndOf="@id/row_pokemon_weight"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             tools:text="H:185" />
     </RelativeLayout>

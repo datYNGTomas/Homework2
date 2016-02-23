@@ -38,7 +38,7 @@ public class PokemonASyncTask extends AsyncTask<String, Integer, JSONArray> {
         //String userId = params[0];
 
         try {
-            URL url = new URL("http://pokeapi.co/api/v2/pokemon/" + currentPokemon.getId());
+            URL url = new URL("http://pokeapi.co/api/v2/row_image/" + currentPokemon.getId());
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 
