@@ -14,7 +14,7 @@
         android:elevation="4dp">
 
         <TextView
-            android:id="@+id/activity_detail_pokemon_name"
+            android:id="@+id/activity_detail_pokemon_name_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

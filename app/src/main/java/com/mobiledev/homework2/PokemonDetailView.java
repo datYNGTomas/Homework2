@@ -21,7 +21,7 @@ public class PokemonDetailView extends AppCompatActivity {
         setContentView(R.layout.activity_pokemon_detail_view);
         Pokemon = getIntent().getParcelableExtra(ARG_POKEMON);
 
-        TextView nameTextView = (TextView) findViewById(R.id.activity_detail_pokemon_name);
+        TextView nameTextView = (TextView) findViewById(R.id.activity_detail_pokemon_name_toolbar);
         TextView heightTextView = (TextView) findViewById(R.id.activity_height_number_detail);
         TextView weightTextView = (TextView) findViewById(R.id.activity_weight_number_detail);
         TextView mIDnumberTextView = (TextView) findViewById(R.id.activity_ID_number_detail);
@@ -29,10 +29,11 @@ public class PokemonDetailView extends AppCompatActivity {
 
         Picasso.with(this).load(Pokemon.getImageUrl()).fit().centerInside().into(pokemonImageView);
 
-        nameTextView.setText(Pokemon.getName());
+        nameTextView.setText(Pokemon.getName() + ", I choose you!");
         mIDnumberTextView.setText(getString(R.string.ID_label, Pokemon.getId()));
         heightTextView.setText(getString(R.string.height_label, Pokemon.getHeight()));
         weightTextView.setText(getString(R.string.weight_label, Pokemon.getWeight()));
+
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.VISIBLE);
     }
