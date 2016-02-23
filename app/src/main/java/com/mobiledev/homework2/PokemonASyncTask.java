@@ -15,6 +15,7 @@ import java.net.URL;
 
 public class PokemonASyncTask extends AsyncTask<String, Integer, JSONArray> {
 
+    private Pokemon currentPokemon;
 
     public static final String TAG = PokemonASyncTask.class.getSimpleName();
 
@@ -22,7 +23,7 @@ public class PokemonASyncTask extends AsyncTask<String, Integer, JSONArray> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        Log.d(TAG, "Pokedex 2000 Lite has been activated");
+        Log.d(TAG, "Started AsyncTask");
     }
 
     @Override
@@ -34,10 +35,10 @@ public class PokemonASyncTask extends AsyncTask<String, Integer, JSONArray> {
             return null;
         }
 
-        String IDNumber = params[0];
+        //String userId = params[0];
 
         try {
-            URL url = new URL("http://pokeapi.co/api/v2/pokemon/" + IDNumber);
+            URL url = new URL("http://pokeapi.co/api/v2/pokemon/" + currentPokemon.getId());
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 

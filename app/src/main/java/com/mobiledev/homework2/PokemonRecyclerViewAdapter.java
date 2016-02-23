@@ -12,36 +12,36 @@ import java.util.ArrayList;
 
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecyclerViewAdapter.PokemonViewHolder> {
 
+    private final OnPokemonRowClickListener Listener;
 
-    private final OnPokemonRowClickListener mListener;
+    private final ArrayList<Pokemon> Pokemons;
 
     public interface OnPokemonRowClickListener {
         void onPokemonRowClick(Pokemon pokemon);
     }
 
-    private final ArrayList<Pokemon> mPokemons;
-
     public PokemonRecyclerViewAdapter(ArrayList<Pokemon> pokemons, OnPokemonRowClickListener listener) {
-        mPokemons = pokemons;
-        mListener = listener;
+        Pokemons = pokemons;
+        Listener = listener;
     }
 
     @Override
     public PokemonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View row = inflater.inflate(R.layout.individual_row_pokemon, parent, false);
-
         return new PokemonViewHolder(row);
     }
 
     @Override
     public void onBindViewHolder(final PokemonViewHolder holder, int position) {
-        Pokemon pokemon = mPokemons.get(position);
+        Pokemon pokemon = Pokemons.get(position);
         holder.name.setText(pokemon.getName());
         holder.id.setText(pokemon.getId());
 
+
         Context context = holder.name.getContext();
         String weight = context.getString(R.string.weight_label, pokemon.getWeight());
+
         holder.weight.setText(weight);
 
         String height = context.getString(R.string.height_label, pokemon.getHeight());
@@ -50,27 +50,22 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
         holder.fullView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mListener != null)
-                    mListener.onPokemonRowClick(mPokemons.get(holder.getAdapterPosition()));
+                if (Listener != null) {
+                    Listener.onPokemonRowClick(Pokemons.get(holder.getAdapterPosition()));
+                }
             }
         });
     }
 
-    public void removePokemon(int position) {
-        mPokemons.remove(position);
-        notifyItemRemoved(position);
-    }
-
     @Override
     public int getItemCount() {
-        return mPokemons.size();
+        return Pokemons.size();
     }
-
 
     static class PokemonViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, id, weight, height;
-        ImageView image;
+        ImageView pokemon;
         View fullView;
 
         public PokemonViewHolder(View itemView) {
@@ -80,8 +75,7 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
             id = (TextView) itemView.findViewById(R.id.row_pokemon_id);
             weight = (TextView) itemView.findViewById(R.id.row_pokemon_weight);
             height = (TextView) itemView.findViewById(R.id.row_pokemon_height);
-            image = (ImageView) itemView.findViewById(R.id.individual_row_image);
+            pokemon = (ImageView) itemView.findViewById(R.id.individual_row_image);
         }
-
     }
 }
