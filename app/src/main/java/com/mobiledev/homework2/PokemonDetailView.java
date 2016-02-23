@@ -24,11 +24,13 @@ public class PokemonDetailView extends AppCompatActivity {
         TextView nameTextView = (TextView) findViewById(R.id.activity_detail_pokemon_name);
         TextView heightTextView = (TextView) findViewById(R.id.activity_height_number_detail);
         TextView weightTextView = (TextView) findViewById(R.id.activity_weight_number_detail);
+        TextView mIDnumberTextView = (TextView) findViewById(R.id.activity_ID_number_detail);
         ImageView pokemonImageView = (ImageView) findViewById(R.id.activity_detail_imageview);
 
         Picasso.with(this).load(Pokemon.getImageUrl()).fit().centerInside().into(pokemonImageView);
 
         nameTextView.setText(Pokemon.getName());
+        mIDnumberTextView.setText(getString(R.string.ID_label, Pokemon.getId()));
         heightTextView.setText(getString(R.string.height_label, Pokemon.getHeight()));
         weightTextView.setText(getString(R.string.weight_label, Pokemon.getWeight()));
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);

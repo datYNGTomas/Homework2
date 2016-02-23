@@ -38,6 +38,7 @@ public class PokemonRecyclerView extends AppCompatActivity implements PokemonRec
     public void onPokemonRowClick(Pokemon pokemon) {
         Intent intent = new Intent(PokemonRecyclerView.this, PokemonDetailView.class);
         intent.putExtra(PokemonDetailView.ARG_POKEMON, pokemon);
+
         startActivityForResult(intent, ID_POKEMON);
     }
 

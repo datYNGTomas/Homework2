@@ -5,9 +5,26 @@
     android:layout_height="match_parent"
     tools:context="com.mobiledev.homework2.PokemonRecyclerView">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/recyclerView_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/main_activity_toolbar_title"
+            android:textSize="30sp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/activity_pokemon_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recyclerView_toolbar" />
 
 </RelativeLayout>

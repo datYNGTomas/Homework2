@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Homework2</string>
-    <string name="weight_label">Weight: %s</string>
-    <string name="height_label">Height: %s</string>
+    <string name="weight_label">W: %s</string>
+    <string name="height_label">H: %s</string>
+    <string name="ID_label">ID: %s</string>
     <string name="image_description_detail_view">This is where the image of the pokemon goes</string>
-    <string name="main_activity_toolbar_title">Pokedex 2000 Lite</string>
+    <string name="main_activity_toolbar_title"><i>Pokedex 2000 Lite</i></string>
     <string name="individual_row_imageView_description">This is where the image of a pokemon goes</string>
 </resources>
