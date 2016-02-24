@@ -38,19 +38,6 @@ public class PokemonRecyclerView extends AppCompatActivity implements PokemonRec
     public void onPokemonRowClick(Pokemon pokemon) {
         Intent intent = new Intent(PokemonRecyclerView.this, PokemonDetailView.class);
         intent.putExtra(PokemonDetailView.ARG_POKEMON, pokemon);
-
-        startActivityForResult(intent, ID_POKEMON);
+        this.startActivity(intent);
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if (requestCode == ID_POKEMON && resultCode == RESULT_OK) {
-            Pokemon pokemon = data.getParcelableExtra(PokemonDetailView.ARG_POKEMON);
-            //Log.d(TAG, "onItemClick(): Removed row_image at position: " + row_image);
-        }
-
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
 }

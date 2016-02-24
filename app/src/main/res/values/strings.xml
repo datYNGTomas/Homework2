@@ -7,4 +7,13 @@
     <string name="main_activity_toolbar_title"><i>Pokedex 2000 Lite</i></string>
     <string name="individual_row_imageView_description">This is where the image of a pokemon goes</string>
     <string name="corny_title_toolbar">%s, I choose you!</string>
+    <string name="detail_view_failed_connection_snackbar">CONNECTING: FAILED</string>
+    <string name="detail_view_approved_connection_snackbar">CONNECTION: APPROVED</string>
+    <string name="detail_view_HP_setText">"HP: "</string>
+    <string name="detail_view_attack_setText">"Attack: "</string>
+    <string name="detail_view_defense_setText">"Defense: "</string>
+    <string name="detail_view_speed_setText">"Speed: "</string>
+    <string name="detail_view_specialAttack_setText">"Special Attack: "</string>
+    <string name="detail_view_specialDefense_setText">"Special Defense: "</string>
+    <string name="detail_view_baseExperience_setText">"Base Experience: "</string>
 </resources>
