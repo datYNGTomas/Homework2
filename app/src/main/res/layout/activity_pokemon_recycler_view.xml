@@ -16,8 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/main_activity_toolbar_title"
-            android:textSize="30sp"
-            />
+            android:textSize="30sp" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -25,6 +24,7 @@
         android:id="@+id/activity_pokemon_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/recyclerView_toolbar" />
+        android:layout_below="@+id/recyclerView_toolbar"
+        android:elevation="8dp" />
 
 </RelativeLayout>

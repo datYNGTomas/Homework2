@@ -28,6 +28,7 @@ public class PokemonDetailView extends AppCompatActivity implements PokemonASync
     private PokemonASyncTask mAsyncTask;
     public TextView mHPTextView, mAttackTextView, mDefenseTextView, mSpeedTextview, mSpecialAttackTextView, mSpecialDefenseTextView, mBaseExperienceTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +63,7 @@ public class PokemonDetailView extends AppCompatActivity implements PokemonASync
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo == null || !networkInfo.isConnected()) {
             Snackbar.make(pokemonImageView, R.string.detail_view_failed_connection_snackbar, Snackbar.LENGTH_LONG).show();
+            progressBar.setVisibility(View.INVISIBLE);
         } else {
             Snackbar.make(pokemonImageView, getString(R.string.detail_view_approved_connection_snackbar), Snackbar.LENGTH_LONG).show();
         }
@@ -81,8 +83,19 @@ public class PokemonDetailView extends AppCompatActivity implements PokemonASync
     @Override
     protected void onStart() {
         super.onStart();
-        mAsyncTask = new PokemonASyncTask(this);
-        mAsyncTask.execute(mCurrentPokemon.getId());
+        //ugh, almost there!
+        if (mCurrentPokemon.getmHP() != null) {
+            mHPTextView.setText(getString(R.string.detail_view_HP_setText) + mCurrentPokemon.getmHP());
+            mAttackTextView.setText(getString(R.string.detail_view_attack_setText) + mCurrentPokemon.getmAttack());
+            mDefenseTextView.setText(getString(R.string.detail_view_defense_setText) + mCurrentPokemon.getmDefense());
+            mSpeedTextview.setText(getString(R.string.detail_view_speed_setText) + mCurrentPokemon.getmSpeed());
+            mSpecialAttackTextView.setText(getString(R.string.detail_view_specialAttack_setText) + mCurrentPokemon.getmSpecialAttack());
+            mSpecialDefenseTextView.setText(getString(R.string.detail_view_specialDefense_setText) + mCurrentPokemon.getmSpecialDefense());
+            mBaseExperienceTextView.setText(getString(R.string.detail_view_baseExperience_setText) + mCurrentPokemon.getmBaseExperience());
+        } else {
+            mAsyncTask = new PokemonASyncTask(this);
+            mAsyncTask.execute(mCurrentPokemon.getId());
+        }
     }
 
     @Override

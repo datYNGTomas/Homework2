@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_below="@+id/activity_detail_toolbar"
+        android:background="@android:color/white"
         android:contentDescription="@string/image_description_detail_view"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
@@ -39,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_detail_imageview"
+        android:background="@android:color/white"
         android:orientation="horizontal"
         android:paddingBottom="8dp"
         android:paddingEnd="16dp"
@@ -101,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             tools:text="HP: 5 hours" />
 
         <TextView
@@ -110,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             tools:text="Attack: Super Strong" />
 
         <TextView
@@ -119,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             tools:text="Defense: Super Strong" />
 
         <TextView
@@ -128,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             tools:text="Speed: Super Fast" />
 
         <TextView
@@ -137,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             tools:text="Special Attack: Super Strong" />
 
         <TextView
@@ -146,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             tools:text="Special Defense: Super Strong" />
 
         <TextView
@@ -155,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             tools:text="Base Experience: Amazing" />
     </LinearLayout>
 

@@ -10,7 +10,7 @@
     <style name="DarkBlue" parent="Theme.AppCompat.NoActionBar">
         <item name="android:colorBackground">@color/background_material_dark</item>
     </style>
-    <style name="LinearProgress" parent="Theme.AppCompat.Light">
+    <style name="LinearProgress" parent="android:Theme.Holo.Light">
         <item name="colorAccent">@color/gray</item>
         <item name="android:progressBackgroundTint">@color/silver</item>
     </style>

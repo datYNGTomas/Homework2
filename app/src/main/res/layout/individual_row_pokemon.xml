@@ -1,65 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    android:layout_margin="5dp"
+    android:elevation="4dp"
+    cardview:cardCornerRadius="4dp"
 
-    <ImageView
-        android:id="@+id/individual_row_image"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:contentDescription="@string/individual_row_imageView_description"
-        tools:background="@android:color/holo_blue_dark" />
+    >
 
-    <RelativeLayout
-        android:id="@+id/individual_row_text"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="9"
-        android:paddingStart="10dp">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/row_pokemon_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:textColor="@android:color/black"
-            android:textSize="28sp"
-            tools:text="5" />
+        <ImageView
+            android:id="@+id/individual_row_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:contentDescription="@string/individual_row_imageView_description"
+            tools:background="@android:color/holo_blue_dark" />
 
-        <TextView
-            android:id="@+id/row_pokemon_textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toStartOf="@id/row_pokemon_id"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            tools:text="FakePokemon" />
+        <RelativeLayout
+            android:id="@+id/individual_row_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:paddingStart="10dp">
 
-        <TextView
-            android:id="@+id/row_pokemon_weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/row_pokemon_textView"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            tools:text="W:85" />
+            <TextView
+                android:id="@+id/row_pokemon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                tools:text="5" />
 
-        <TextView
-            android:id="@+id/row_pokemon_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/row_pokemon_textView"
-            android:layout_marginStart="6dp"
-            android:layout_toEndOf="@id/row_pokemon_weight"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            tools:text="H:185" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/row_pokemon_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/row_pokemon_id"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="FakePokemon" />
 
+            <TextView
+                android:id="@+id/row_pokemon_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row_pokemon_textView"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                tools:text="W:85" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/row_pokemon_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row_pokemon_textView"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@id/row_pokemon_weight"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                tools:text="H:185" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

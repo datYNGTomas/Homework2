@@ -79,28 +79,7 @@ public class PokemonASyncTask extends AsyncTask<String, Integer, JSONObject> {
     protected void onCancelled(JSONObject jsonObject) {
         super.onCancelled(jsonObject);
         Log.d(TAG, "PokemonASyncTask has been cancelled");
-        // cancel something else
     }
-
-//    public void setStats(JSONObject jsonObject) {
-//        try {
-//            mCurrentPokemon.setmWeight(jsonObject.get("weight").toString());
-//            mCurrentPokemon.setmHeight(jsonObject.get("height").toString());
-//            mCurrentPokemon.setmBaseExperience(jsonObject.get("base_experience").toString());
-//
-//            JSONArray arrayStats = jsonObject.getJSONArray("stats");
-//
-//            mCurrentPokemon.setmSpeed(((JSONObject) arrayStats.get(0)).getString("base_stat"));
-//            mCurrentPokemon.setmSpecialDefense(((JSONObject) arrayStats.get(1)).getString("base_stat"));
-//            mCurrentPokemon.setmSpecialAttack(((JSONObject) arrayStats.get(2)).getString("base_stat"));
-//            mCurrentPokemon.setmDefense(((JSONObject) arrayStats.get(3)).getString("base_stat"));
-//            mCurrentPokemon.setmAttack(((JSONObject) arrayStats.get(4)).getString("base_stat"));
-//            mCurrentPokemon.setmHP(((JSONObject) arrayStats.get(5)).getString("base_stat"));
-//
-//        } catch (JSONException e) {
-//            Log.e(TAG, e.getLocalizedMessage());
-//        }
-//    }
 
     @Override
     protected void onPostExecute(JSONObject jsonObject) {
