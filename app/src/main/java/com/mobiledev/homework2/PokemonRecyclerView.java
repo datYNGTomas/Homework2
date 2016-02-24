@@ -26,9 +26,6 @@ public class PokemonRecyclerView extends AppCompatActivity implements PokemonRec
         Adapter = new PokemonRecyclerViewAdapter(Pokedex.getPokemons(), this);
         RecyclerView.setAdapter(Adapter);
 
-        //final String url = "http://pokeapi.co/api/v2/pokemon/" + ID_POKEMON;
-        //new PokemonASyncTask().execute(url);
-
         RecyclerView.setItemAnimator(new DefaultItemAnimator());
 
     }

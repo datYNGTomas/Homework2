@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp">
+        android:elevation="8dp">
 
         <TextView
             android:id="@+id/activity_detail_pokemon_name_toolbar"
